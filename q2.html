@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square and Cube</title>
+</head>
+<body>
+
+    <h2>Square and Cube Calculator</h2>
+
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="calculate()">Calculate</button>
+
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let number = document.getElementById("num").value;
+            let resultText = document.getElementById("result");
+
+            if (number === "") {
+                resultText.innerHTML = "Please enter a number.";
+            } else {
+                let square = number * number;
+                let cube = number * number * number;
+
+                resultText.innerHTML =
+                    "Square: " + square + "<br>" +
+                    "Cube: " + cube;
+            }
+        }
+    </script>
+
+</body>
+</html>

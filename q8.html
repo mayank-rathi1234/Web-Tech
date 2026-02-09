@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Validation</title>
+</head>
+<body>
+
+    <h2>Text Box Validation</h2>
+
+    <input type="text" id="username" placeholder="Enter your name">
+    <button onclick="validate()">Submit</button>
+
+    <p id="warning" style="color:red;"></p>
+
+    <script>
+        function validate() {
+            let input = document.getElementById("username").value;
+            let warningText = document.getElementById("warning");
+
+            if (input === "") {
+                warningText.innerHTML = "⚠️ Please enter a value. Field cannot be empty.";
+            } else {
+                warningText.innerHTML = "Input submitted successfully!";
+                warningText.style.color = "green";
+            }
+        }
+    </script>
+
+</body>
+</html>
